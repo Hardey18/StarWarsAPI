@@ -66,9 +66,9 @@ fetch(url)
                 <img src="${aa}" />
               </div>
               <div>
-                <p class="char-name">Name: ${any.name}</p>
-                <p>Gender: ${any.gender}</p>
-                <p>Height: ${any.height}</p>
+                <p class="char-name">Name: <strong>${any.name}</strong></p>
+                <p>Gender: <strong>${any.gender}</strong></p>
+                <p>Height: <strong>${any.height}</strong></p>
                 <p class="close">&times;</p>
               </div>  
             <div>

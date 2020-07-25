@@ -56,6 +56,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    line-height: 38px;
 }
 
 .char-container div:first-child {
@@ -85,15 +86,18 @@ section:hover {
     transition: 1s ease-in-out;
     background: black;
     color: wheat;
+    transform: scale(1.05);
+    transition: all 1s;
 }
 
 section img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    filter: blur(2px);
 }
 
 section img:hover {
-    filter: blur(4px);
+    filter: blur(0);
 }
 
 .header-logo {
