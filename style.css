@@ -164,6 +164,11 @@ h3 {
     #characters {
         grid-template-columns: 50% 50%;
     }
+    .char-container {
+        display: block;
+        text-align: center;
+    }
+    
 }
 
 @media (max-width: 450px) {
