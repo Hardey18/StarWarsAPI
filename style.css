@@ -142,6 +142,17 @@ h3 {
     #characters {
         grid-template-columns: 33.3% 33.3% 33.3%;
     }
+    .char-container {
+        display: block;
+        text-align: center;
+    }
+    .close {
+        right: 20px;
+        /* width: 60%; */
+    }
+    .char-container div:first-child {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 680px) {
