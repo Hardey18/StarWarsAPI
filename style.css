@@ -1,7 +1,21 @@
-ul img {
-    width: 100px;
-
-}
+ body {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     border: 0;
+     background: linear-gradient(to left, rgb(134, 168, 190), rgb(156, 76, 80));
+    width: 100%;
+    /* height: 400vh; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* z-index: -1; */
+ }
+ 
+ h1 {
+     text-align: center;
+     text-transform: uppercase;
+ }
 
  .aside {
     display: none;
@@ -12,7 +26,7 @@ ul img {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.7);
   }
 
   .close {
@@ -37,9 +51,108 @@ ul img {
     width: 80%;
   }
 
-  .char-container {
-      width: 50%;
-      /* background: red; */
-      text-align: center;
-      margin: 0 auto;
-  }
+.char-container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.char-container div:first-child {
+    margin-right: 50px;
+}
+
+#characters {
+    /* background: red; */
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 20px;
+    /* top: -120px; */
+}
+
+section {
+    /* background: green; */
+    text-align: center;
+    /* border: 1px solid black; */
+    margin: 20px;
+    border-radius: 10px;
+    background: wheat;
+    cursor: pointer;
+}
+
+section:hover {
+    box-shadow: 12px 12px 20px rgba(9, 9, 10, 0.2);
+    transition: 1s ease-in-out;
+    background: black;
+    color: wheat;
+}
+
+section img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+section img:hover {
+    filter: blur(4px);
+}
+
+.header-logo {
+    width: 100%;
+    /* height: 280px; */
+}
+header {
+    /* display: grid; */
+    /* background-image: url("top.jpg"); */
+    /* height: 300px; */
+    width: auto;
+    text-align: center;
+    
+}
+
+h3 {
+    cursor: pointer;
+}
+
+
+
+
+
+.animation-area {
+    /* background: linear-gradient(to left, rgb(134, 168, 190), rgb(156, 76, 80)); */
+    /* width: 100%; */
+    /* height: 400vh; */
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    /* z-index: -1; */
+}
+
+/* .animation-area1 {
+    background: linear-gradient(to left, rgb(141, 204, 59), rgb(156, 76, 80));
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin-bottom: 0;
+} */
+
+@media (max-width: 950px) {
+    #characters {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+@media (max-width: 680px) {
+    #characters {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    #characters {
+        grid-template-columns: 100%;
+    }
+}
+
