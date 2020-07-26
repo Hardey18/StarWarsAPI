@@ -146,17 +146,12 @@ h3 {
     #characters {
         grid-template-columns: 33.3% 33.3% 33.3%;
     }
-    .char-container {
-        /* display: block;
-        text-align: center; */
-        width: 100%;
-    }
     .close {
         right: 20px;
         /* width: 60%; */
     }
     .char-container div:first-child {
-        margin-right: 16px;
+        margin-right: 26px;
     }
 }
 
