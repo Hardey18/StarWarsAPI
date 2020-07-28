@@ -11,8 +11,8 @@ let modalContent = document.querySelector('.modal-content');
 const url = 'https://swapi.dev/api/people/?results';
 
 class User {
-  constructor(par) {
-    this.par = par
+  constructor(character) {
+    this.character = character
   }
 
   get viewUser() {
@@ -20,7 +20,7 @@ class User {
       name,
       gender,
       height
-    } = this.par
+    } = this.character
 
     return {
       name,
@@ -35,27 +35,27 @@ fetch(url)
 // Transform the data into json
   .then((resp) => resp.json())
   .then((data) => {
-    let character  = data.results;
+    let characters  = data.results;
     
-    character.map((par,index) => {
+    characters.map((character,index) => {
         let aa = `https://picsum.photos/200/300/?=${index}`;
-        let user = new User(par);
+        let user = new User(character);
         // console.log(user);
         //  Create the elements we need
         let any = user.viewUser
         let section = createNode('section')
-        p1 = createNode('h3'),
+        characterName = createNode('h3'),
         cl = createNode('span'),
         img1 = createNode('img')
         // Make the HTML of our span to be the first and last name of our author
-        p1.innerHTML = `${par.name}`,
+        characterName.innerHTML = `${character.name}`,
         // p2.innerHTML += `${par.height}`,
         img1.src = aa;
         // p3.innerHTML += user.name
 
         // Append all our elements
         append(section, img1),
-        append(section, p1),
+        append(section, characterName),
         append(div, section)
 
         section.addEventListener("click", () => {
@@ -74,6 +74,7 @@ fetch(url)
             <div>
           `
           let only = document.querySelector('.close');
+          // console.log(only)
           only.onclick = () => {
             aside.style.display = "none";
           } 
@@ -87,3 +88,5 @@ window.onclick = function(event) {
     aside.style.display = "none";
   }
 }
+
+

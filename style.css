@@ -5,6 +5,7 @@
      border: 0;
      background: linear-gradient(to left, rgb(134, 168, 190), rgb(156, 76, 80));
     width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     /* height: 400vh; */
     /* position: absolute; */
     /* top: 0; */
@@ -141,6 +142,32 @@ h3 {
     z-index: -1;
     margin-bottom: 0;
 } */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 400px;
+}
+
+footer img {
+    width: 10%;
+    height: 10%;
+}
+
+@media (max-width: 1200px) {
+    footer {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 18px 0;
+    }
+
+    footer img {
+        margin: 14px 0;
+    }
+}
 
 @media (max-width: 950px) {
     #characters {
