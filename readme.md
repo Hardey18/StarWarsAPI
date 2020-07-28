@@ -1,1 +1,1 @@
-### Creating a front end application using html, CSS and JavaScript. It shows all characters from a star wars API
+### A front end application using HTML, CSS and JavaScript. It shows all characters from a Star Wars API
