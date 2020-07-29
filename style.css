@@ -6,11 +6,6 @@
      background: linear-gradient(to left, rgb(134, 168, 190), rgb(156, 76, 80));
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* height: 400vh; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* z-index: -1; */
  }
  
  h1 {
@@ -65,17 +60,13 @@
 }
 
 #characters {
-    /* background: red; */
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     padding: 20px;
-    /* top: -120px; */
 }
 
 section {
-    /* background: green; */
     text-align: center;
-    /* border: 1px solid black; */
     margin: 20px;
     border-radius: 10px;
     background: wheat;
@@ -103,12 +94,8 @@ section img:hover {
 
 .header-logo {
     width: 100%;
-    /* height: 280px; */
 }
 header {
-    /* display: grid; */
-    /* background-image: url("top.jpg"); */
-    /* height: 300px; */
     width: auto;
     text-align: center;
     
@@ -123,26 +110,8 @@ h3 {
 
 
 .animation-area {
-    /* background: linear-gradient(to left, rgb(134, 168, 190), rgb(156, 76, 80)); */
-    /* width: 100%; */
-    /* height: 400vh; */
     position: absolute;
-    /* top: 0; */
-    /* left: 0; */
-    /* z-index: -1; */
 }
-
-/* .animation-area1 {
-    background: linear-gradient(to left, rgb(141, 204, 59), rgb(156, 76, 80));
-    width: 100%;
-    height: 120vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    margin-bottom: 0;
-} */
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -175,7 +144,6 @@ footer img {
     }
     .close {
         right: 20px;
-        /* width: 60%; */
     }
     .char-container div:first-child {
         margin-right: 26px;
