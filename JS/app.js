@@ -4,17 +4,18 @@ let createNode = element => document.createElement(element);
 // Append the second parameter(element) to the first one
 let append = (parent, el) => parent.appendChild(el); 
 
-// Get the list where we will place our authors
 const div = document.getElementById('characters');
 let aside = document.querySelector('.aside');
 let modalContent = document.querySelector('.modal-content');
+
 const url = 'https://swapi.dev/api/people/?results';
 
+// Create the character Class
 class User {
   constructor(character) {
     this.character = character
   }
-
+  // to get certain properties for each character
   get viewUser() {
     const {
       name,
@@ -38,32 +39,31 @@ fetch(url)
     let characters  = data.results;
     
     characters.map((character,index) => {
-        let aa = `https://picsum.photos/200/300/?=${index}`;
+        let image = `https://picsum.photos/200/300/?=${index}`;
         let user = new User(character);
-        // console.log(user);
+        
         //  Create the elements we need
         let any = user.viewUser
         let section = createNode('section')
         characterName = createNode('h3'),
-        cl = createNode('span'),
         img1 = createNode('img')
-        // Make the HTML of our span to be the first and last name of our author
-        characterName.innerHTML = `${character.name}`,
-        // p2.innerHTML += `${par.height}`,
-        img1.src = aa;
-        // p3.innerHTML += user.name
 
-        // Append all our elements
+        // Make the HTML of the page to be First Name and Image
+        characterName.innerHTML = `${character.name}`,
+        img1.src = image;
+
+        // Append all elements on the page
         append(section, img1),
         append(section, characterName),
         append(div, section)
 
+        // Append the div elements of Star Wars Character individual details into the modal
         section.addEventListener("click", () => {
           aside.style.display = "block";
           modalContent.innerHTML = `
             <div class="char-container">
               <div>
-                <img src="${aa}" />
+                <img src="${image}" />
               </div>
               <div>
                 <p class="char-name">Name: <strong>${any.name}</strong></p>
@@ -74,7 +74,8 @@ fetch(url)
             <div>
           `
           let only = document.querySelector('.close');
-          // console.log(only)
+
+          // Close button function
           only.onclick = () => {
             aside.style.display = "none";
           } 
@@ -83,6 +84,7 @@ fetch(url)
   
   }) 
 
+// On clicking outside the modal, it should also close 
 window.onclick = function(event) {
   if (event.target == aside) {
     aside.style.display = "none";
